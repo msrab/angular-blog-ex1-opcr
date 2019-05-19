@@ -1,0 +1,13 @@
+
+	<li class="list-group-item" 
+		[ngStyle]="{background: getBg()}">
+		<h2>{{ postTitle }}</h2>
+		<p>{{ postContent }}</p>
+		<br>	
+		<p>Publié le {{ postDate | date : 'EEEE d LLLL yyyy H:mm' }}</p>
+		<p>{{ postLike }} likes</p>
+		<button class="btn btn-success"
+				(click)="like()">Like</button>
+		<button class="btn btn-danger"
+				(click)="dontLike()">Don't like</button>
+	</li>
